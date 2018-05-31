@@ -3,6 +3,8 @@ import os
 from flask import Flask
 from flask_restful import Api
 from flask_jwt import JWT
+from db import db
+from flask_migrate import Migrate
 
 from security import authenticate, identity
 from resources.user import UserRegister
@@ -10,6 +12,7 @@ from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
 app = Flask(__name__)
+migrate = Migrate(app, db)
 
 app.config['DEBUG'] = True
 
@@ -28,7 +31,6 @@ api.add_resource(StoreList, '/stores')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__':
-    from db import db
     db.init_app(app)
 
     if app.config['DEBUG']:
