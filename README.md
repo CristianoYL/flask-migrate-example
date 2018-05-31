@@ -1,5 +1,7 @@
-# Stores REST Api
+# Introduction
 
-This is built with Flask, Flask-RESTful, Flask-JWT, and Flask-SQLAlchemy.
+This is a sample project to test `Flask-Migrate` for database migrations.
 
-Deployed on Heroku.
+# Credit
+
+This project is derived from the **Stores REST API** project [from this repo](https://github.com/schoolofcode-me/stores-rest-api).
