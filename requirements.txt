@@ -1,6 +1,6 @@
 Flask
+Flask-JWT-Extended
 Flask-RESTful
-Flask-JWT
 Flask-SQLAlchemy
 psycopg2
 Flask-Migrate
